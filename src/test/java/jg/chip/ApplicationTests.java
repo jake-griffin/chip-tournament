@@ -2,6 +2,7 @@ package jg.chip;
 
 import jg.chip.controller.AuthenticationController;
 import jg.chip.controller.TournamentController;
+import jg.chip.controller.AccountController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,9 +18,13 @@ class ApplicationTests {
     @Autowired
     private TournamentController tournamentController;
 
+    @Autowired
+    private AccountController accountController;
+
     @Test
     void contextLoads() {
         assertNotNull(authenticationController);
         assertNotNull(tournamentController);
+        assertNotNull(accountController);
     }
 }
