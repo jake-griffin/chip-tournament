@@ -21,6 +21,11 @@ public class SecurityUtils {
         return currentAccount == null ? null : currentAccount.getId();
     }
 
+    public Long getCurrentPlayerId() {
+        final Account currentAccount = getCurrentAccount();
+        return currentAccount == null ? null : currentAccount.getPlayerId();
+    }
+
     public Account getCurrentAccount() {
         return accountRepository.findByUsername(getCurrentUsername());
     }

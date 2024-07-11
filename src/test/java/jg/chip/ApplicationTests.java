@@ -1,6 +1,7 @@
 package jg.chip;
 
 import jg.chip.controller.AuthenticationController;
+import jg.chip.controller.PlayerController;
 import jg.chip.controller.TournamentController;
 import jg.chip.controller.AccountController;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,9 @@ class ApplicationTests {
     private AuthenticationController authenticationController;
 
     @Autowired
+    private PlayerController playerController;
+
+    @Autowired
     private TournamentController tournamentController;
 
     @Autowired
@@ -24,6 +28,7 @@ class ApplicationTests {
     @Test
     void contextLoads() {
         assertNotNull(authenticationController);
+        assertNotNull(playerController);
         assertNotNull(tournamentController);
         assertNotNull(accountController);
     }
